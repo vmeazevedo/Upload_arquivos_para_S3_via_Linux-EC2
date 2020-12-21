@@ -77,7 +77,7 @@ import boto3
 
 s3_client = boto3.client('s3', aws_access_key_id='<acess_key>', aws_secret_access_key='<secret_acess_key>', region_name='<region>')
 
-s3_client.upload_file('<arquivo>', '<bucket>', '<nome_arquivo_bucket>', ExtraArgs={'ACL':'public-read'})
+s3_client.upload_file('arquivo', 'bucket', 'nome_arquivo_bucket', ExtraArgs={'ACL':'public-read'})
   
 --------------------------------------------------------------------------------------------------------------------------------------
 

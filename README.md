@@ -71,12 +71,16 @@ mkdir projeto
 - Agora iremos realizar o mesmo processo para criar o nosso script Python, digite: nano script.py
 - Dentro da tela do nano digite o script abaixo:
 
+
+--------------------------------------------------------------------------------------------------------------------------------------
 import boto3
 
 s3_client = boto3.client('s3', aws_access_key_id='<acess_key>', aws_secret_access_key='<secret_acess_key>', region_name='<region>')
 
 s3_client.upload_file('<arquivo>', '<bucket>', '<nome_arquivo_bucket>', ExtraArgs={'ACL':'public-read'})
-  
+--------------------------------------------------------------------------------------------------------------------------------------
+
+
 Legenda:
 <acess_key> e <secret_acess_key> - são as chaves de segurança para você validar o script, caso você não saiba a sua você pode encontrar elas indo no caminho abaixo:
 - Clique sobre o nome da sua conta AWS, irá abrir um menu, posteriormente clique em "My Security Credential"

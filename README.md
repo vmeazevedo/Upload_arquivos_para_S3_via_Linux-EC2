@@ -56,5 +56,37 @@ puttygen.exe (a RSA and DSA key generation utility)
 - Clicar em "Open" para inicializar o nosso terminal do Linux EC2.
 - Entre com o login: ec2-user
   
+## Terminal Linux EC2
+- Após entrar no terminal entre em modo root com o comando: sudo su
+- Temos que instalar o gerenciamento de pacotes padrão do Python que é o pip, ainda no terminal digite o comando: yum install python-pip
+- Posteri a isso vamos instalar a biblioteca que permite realizarmos o upload para o nosso bucket, digite o comando: yum install boto3
+- Agora va para a /home da sua instância e crie uma pasta para salvarmos o nosso código exemplo, digite:
+cd ..
+mkdir projeto
+- Entre na pasta do projeto que acabamos de criar digitando o comando: cd projeto
+- Dentro da pasta do projeto vamos criar mais dois arquivos, um que será o nosso script Python e o outro que será um arquivo .txt que iremos enviar para nosso bucket
+- Vamos utilizar o nano para criarmos o nosso .txt, digite: nano teste.txt
+- Uma nova tela se abrirá que é a interface do nano, digite qualquer texto dentro do arquivo e salve-o pressionando "ctrl+O" e depois pressione "ctrl+X" para fechar
+- Com isso temos um arquivo .txt criado dentro da pasta "projeto", para confirmar que o arquivo foi criado digite o comando: ls
+- Agora iremos realizar o mesmo processo para criar o nosso script Python, digite: nano script.py
+- Dentro da tela do nano digite o script abaixo:
+
+import boto3
+s3_client = boto3.client('s3', aws_access_key_id='<acess_key>', aws_secret_access_key='<secret_acess_key>', region_name='<region>')
+s3_client.upload_file('<arquivo>', '<bucket>', '<nome_arquivo_bucket>', ExtraArgs={'ACL':'public-read'})
   
+Legenda:
+<acess_key> e <secret_acess_key> - são as chaves de segurança para você validar o script, caso você não saiba a sua você pode encontrar elas indo no caminho abaixo:
+- Clique sobre o nome da sua conta AWS, irá abrir um menu, posteriormente clique em "My Security Credential"
+- Na tela nova clique no menu "Usuários"
+- Na tela nova clique em seu usuário (vai estar em azul)
+- Na tela nova acesse a aba "Credenciais de segurança", as chaves estarão lá.
+<arquivo> – o nome do arquivo em nossa máquina local.
+<bucket> – o nome do bucket S3 para o qual estamos carregando nosso arquivo.
+<nome_arquivo_bucket> – o nome desejado do arquivo no bucket do S3.
+ExtraArgs={'ACL':'public-read'} – esse é um argumento opcional que informa à AWS para tornar o arquivo carregado legível ao público.
+
+- Após escrever o script dentro do nano pressione "ctrl+O" para salvar e depois pressione "ctrl+X" para fechar.
+- Para rodar o script digite o comando: python <nome-do-arquivo>.py
+- Se todos os passo foram feitos corretamente o arquivo .txt que criamos está agora dentro do seu bucket no S3, você pode validar entrando na console do AWS e abrindo o seu bucket criado.
   

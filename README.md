@@ -41,10 +41,13 @@ SSH		TCP	22	Custom	0.0.0.0/0
 ## Baixando e configurando o Putty para conexão SSH
 - Acessar o site: https://www.chiark.greenend.org.uk/~sgtatham/putty/latest.html 
 - Realizar o download do Putty e do PuttyGen
+
 Putty:
 putty.exe (the SSH and Telnet client itself)
+
 PuttyGen:
 puttygen.exe (a RSA and DSA key generation utility)
+
 - Abrir o PuttyGen
 - Clique no botão "Load" e procure o diretório onde salvamoos a key pair gerada na hora que instânciamos a nossa EC2 (.pem)
 - Clique em "Save private key" para salvar um arquivo que iremos utilizar no Putty no Auth. (.ppk)

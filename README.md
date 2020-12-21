@@ -90,11 +90,11 @@ Legenda:
 - Na tela nova clique em seu usuário (vai estar em azul)
 - Na tela nova acesse a aba "Credenciais de segurança", as chaves estarão lá.
 
--<arquivo> – o nome do arquivo em nossa máquina local.
+-arquivo – o nome do arquivo em nossa máquina local.
 
--<bucket> – o nome do bucket S3 para o qual estamos carregando nosso arquivo.
+-bucket – o nome do bucket S3 para o qual estamos carregando nosso arquivo.
 
--<nome_arquivo_bucket> – o nome desejado do arquivo no bucket do S3.
+-nome_arquivo_bucket – o nome desejado do arquivo no bucket do S3.
 
 -ExtraArgs={'ACL':'public-read'} – esse é um argumento opcional que informa à AWS para tornar o arquivo carregado legível ao público.
 

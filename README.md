@@ -100,6 +100,6 @@ Legenda:
 
 
 - Após escrever o script dentro do nano pressione "ctrl+O" para salvar e depois pressione "ctrl+X" para fechar.
-- Para rodar o script digite o comando: python <nome-do-arquivo>.py
+- Para rodar o script digite o comando: python script.py
 - Se todos os passo foram feitos corretamente o arquivo .txt que criamos está agora dentro do seu bucket no S3, você pode validar entrando na console do AWS e abrindo o seu bucket criado.
   

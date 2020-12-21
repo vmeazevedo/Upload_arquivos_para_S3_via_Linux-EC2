@@ -21,7 +21,6 @@ Roadpmap explicando como criar um bucket no S3 da AWS, se conectar a uma instanc
 - Subnet: selecionar o default de onde você esta conectado
 - Auto-assign Public IP: Enable
 - Manter o Add Storage e clicar em "Add Tags"
-- Add Tag: Key = Name, Value = EC2 - MySQL
 - Clicar em "Configure Security Group"
 - Assign a securitty group: Create a new security group
 Security group name: <Nome-do-security-group>

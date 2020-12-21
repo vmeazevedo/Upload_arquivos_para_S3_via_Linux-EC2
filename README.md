@@ -25,8 +25,11 @@ Roadpmap explicando como criar um bucket no S3 da AWS, se conectar a uma instanc
 - Assign a securitty group: 
 
 Create a new security group
+
 Security group name: <Nome-do-security-group>
+
 Description: <Nome-do-security-group>
+
 SSH		TCP	22	Custom	0.0.0.0/0
 
 - Clicar em "Review and launch"

@@ -1,5 +1,5 @@
 ## Upload de arquivos para S3 via Linux-EC2
-Roadpmap dos passos para instanciar um bucket S3, se conectar a uma instancia Linux EC2 via SSH e escrever um script Python para realizar o upload de arquivos para o bucket.
+Roadpmap explicando como criar um bucket no S3 da AWS, se conectar a uma instancia Linux EC2 via SSH e escrever um script Python dentro dela para realizar o upload de qualquer arquivo para o bucket no S3 com a biblioteca boto3
 
 ## Criando Armazenamento S3
 - Acessar o "Console de gerenciamento da AWS"
